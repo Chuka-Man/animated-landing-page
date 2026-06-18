@@ -1,5 +1,7 @@
 # Animated Landing Page
 
+![Project Preview](preview.png)
+
 Мой учебный проект по Frontend-разработке.
 
 В этом проекте я практиковался в создании адаптивного лендинга с использованием HTML и CSS.
