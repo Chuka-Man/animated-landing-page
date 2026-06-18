@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+.hero {
+    min-height: calc(100vh - 90px);
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.subtitle {
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    max-width: 760px;
+    font-size: 72px;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero-text {
+    max-width: 560px;
+    color: #9ca3af;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #8b5cf6;
+}
+
+.stat p {
+    margin: 8px 0 0;
+    color: #9ca3af;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 34px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.25);
+}
+
+.hero-card {
+    min-height: 340px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 32px;
+    background: radial-gradient(circle at top, rgba(139, 92, 246, 0.35), #111827 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.6);
+    margin-bottom: 24px;
+}
+
+.hero-card p {
+    color: #e5e7eb;
+    font-size: 22px;
+}
+
+.services,
+.process {
+    padding: 80px 60px;
+}
+
+.services h2,
+.process h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card,
+.process-card {
+    background: #111827;
+    padding: 30px;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.process-card:hover {
+    transform: translateY(-10px);
+    background: #172033;
+}
+
+.icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.service-card:hover .icon img {
+    transform: scale(1.15);
+}
+
+.service-card p,
+.process-card p {
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.process-card span {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #8b5cf6;
+    margin-bottom: 16px;
+}
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services,
+    .process {
+        padding: 50px 24px;
+    }
+
+    .services-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services h2,
+    .process h2 {
+        font-size: 32px;
+    }
+}
